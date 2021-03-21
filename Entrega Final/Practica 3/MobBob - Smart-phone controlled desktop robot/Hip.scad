@@ -1,0 +1,31 @@
+$fn=50;
+difference(){
+hull(){
+for(i=[37.8,-37.8],j=[18,-18]){
+translate([i,j,2])
+union(){
+cylinder(h=1,r=1);
+translate([0,-0.5,-2])
+sphere(r=1.5);
+}
+}
+}
+rotate([0,0,90])
+translate([0,0,-5])
+cylinder(h=500,r=1.5);
+
+for(i=[33.5,-33.5]){
+    translate([i,0,-5])
+    cylinder(h=500,r=1.5);
+}
+
+for(i=[20,-22.5]){
+     rotate([0,0,90])
+        translate([-12,i-5])
+        cube([24,12.6,15]);
+}
+for(i=[21,-21],j=[14,-14]){
+    translate([i,j,-5])
+    cylinder(h=10,r=1);
+   }
+}
